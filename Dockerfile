@@ -1,6 +1,6 @@
-FROM udata/udata:1.6
+FROM udata/udata:1.6@sha256:ed1088ed63b4cdddcf54787a15e2cc97eb9ca49bbb7942aafc4aca777a4ae22b
 
-RUN pip install redis==3.2.1 requests==2.21.0 --upgrade
+# RUN pip install redis==3.2.1 requests==2.21.0 --upgrade
 
 COPY ./diff/METADATA /usr/local/lib/python2.7/dist-packages/udata-1.6.3.dist-info/METADATA
 COPY ./diff/commands.init.py /usr/local/lib/python2.7/dist-packages/udata/commands/init.py
